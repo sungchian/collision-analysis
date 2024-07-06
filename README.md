@@ -21,30 +21,62 @@ This project uses the California Traffic Collision Data [Dataset](https://www.ka
 - We utilized a comprehensive toolkit consisting of Pandas and NumPy for data manipulation, SQLite3 for database management, Folium for geographical visualizations, and Plotly Express for interactive data visualization in our analysis.
 
 # 📊 Exploratory Data Analysis  
-- The presence of outliers is evident, particularly in features like bed, bath, acre_lot, and house_size.
-- The average property listing was priced at $886,657 with a standard deviation of over $2M indicating a large distribution range.
-- There are missing values in the dataset that inaccurately represent some listings.
-- The data represents a wide range of states that cover the Eastern, Mid-Atlantic, and Caribbean territories. As shown in the bar chart below, New York and New Jersey are the states that account for over 500,000 listings combined, followed by Massachusetts with approximately 175,000 listings.    
+- This geographical insight is a valuable starting point for further investigation into the factors that contribute to higher incident rates in these areas.
+- By identifying these locations, policymakers and local authorities can customize interventions to address unique challenges in each area, ultimately leading to targeted road safety improvements.
    <br>
       <img src="Images/img-01.png" width="500">
    <br>  
-- The variables bed, bath, and house_size are positively correlated to price, meaning that the property price tends to increase as these features increase, as shown in the heat map below. (The redder the square, the weaker the correlation. The darker the gray or black, the stronger the correlation.)  
+- Next, we analyzed the gender and race distribution of the collision parties and found that there was an even split, with 60% male and 40% female, and representation from diverse racial backgrounds including white, Hispanic, black, and Asian.  
    <br>
       <img src="Images/img-02.png" width="500">
    <br>  
-- In this dataset, New York appears to be the state with the highest average property price at over $1.4 million, whereas West Virginia appears to be the state with the lowest average property price, averaging around $62,000 per property. Additionally, the property price seems to increase in high-density urban areas such as New York City and parts of Boston, as shown in the map below.  
+- During our research, we paid particular attention to age-related trends and found that drivers between the ages of 20 and 30 have the highest collision rates. This finding is in line with the higher insurance rates charged to younger drivers, as shown in the age and fault distribution chart. The chart demonstrates that younger drivers are at fault more often, which affects insurance premiums.
    <br>
       <img src="Images/img-03.png" width="500">
-   <br>  
-- Though New York and Massachusetts share similarities with their high average listing price, the features of these properties differ significantly. On a city-by-city comparison, the average house size in Massachusetts is much larger than that of New York. The smaller property size combined with the high price makes New York the state with the highest average price per square foot in this dataset.  
+   <br>
    <br>
       <img src="Images/img-04.png" width="500">
-   <br>
-- Georgia, West Virginia, and the Virgin Islands seem to have the highest average number of bedrooms and bathrooms per property.
+   <br>  
+- After analyzing the data provided, we have noticed a decrease in collision rates in California. This trend is consistent and warrants further investigation into the factors that may have contributed to it, possible interventions that can be implemented, and the implications for road safety measures.
    <br>
       <img src="Images/img-05.png" width="500">
    <br>
+- In different vehicle categories, motor or scooter has the most collisions, 300000 cases, for the past 20 years. Although these vehicles are not commonly seen on the street in America, they still have the highest amount of collisions, which means these vehicles can be really dangerous. The second and third highest collision amounts are from cars and trucks. They respectively had 170000 and 20000 collision cases for the past 20 years.
+   <br>
+       <img src="Images/img-05.png" width="500">
+   <br>
+- In those three categories, we analyzed the relationship between the brands and safety. For motors or scooters, harley-davidson, Ducati, Honda, and Suzuki have the most people killed in collisions. The highest rate was around 4.2%. On the contrary, BMW has the least people killed in collisions.
+   <br>
+       <img src="Images/img-05.png" width="500">
+   <br>
+- Look at the car category: Ford, Chevrolet, and Dodge have the most people killed in the collisions. The highest rate was 3.3%. On the other hand, Honda, Nissan, and BMW have the least number of people killed in collisions. However, considering the price and gas savings, most people usually buy a Honda or Nissan when they start working.
+   <br>
+       <img src="Images/img-05.png" width="500">
+   <br>
+- Look at the trucks. Dodge had the most people killed in the collisions, the rate was greater than 6%. Toyota and Nissan were the safest brands, with the fewest fatalities from collisions.
+   <br>
+       <img src="Images/img-05.png" width="500">
+   <br>
+- Look at the collisions at different times of the day. As mentioned, the categories of motorcycle or scooter, car, and truck have the most collisions. We can see that most collisions happen from 3 pm to 6 pm and the number peaks at 5 pm, which is the time the sun sets and people get off of work. When the sun is setting, the sunlight will become very strong. On top of that, many people will rush back home which might result in not driving carefully.
+   <br>
+       <img src="Images/img-05.png" width="500">
+   <br>
+- In the occurrences in the holiday chart, we can give some insights. Considering certain holidays (such as Halloween) have consistently shown high accident rates over the years, the government may consider intensifying traffic regulations during these dates.
+   <br>
+       <img src="Images/img-05.png" width="500">
+   <br>
+- Age vs. Total Alcohol Involved:
+- There is a significant decline in the number of incidents involving alcohol as age increases. The highest number of alcohol-involved cases occurs among individuals between the ages of 20 to 29 (ages 16 to 20 have relatively lower cases), after which there's a gradual decrease as age advances.
+   <br>
+       <img src="Images/img-05.png" width="500">
+   <br>
+- Age vs. Total Collisions:
+- Total collisions generally follow a downward trend as age progresses. The highest number of collisions tends to occur among younger individuals (ages 16 to 25), while older age groups (from around 30 onwards) experience fewer collisions.
 
+   <br>
+       <img src="Images/img-05.png" width="500">
+   <br>
+  
 Highlighting these relationships helped us gain a deeper understanding of the data which offered valuable insight as we continued our analysis through machine learning models.  
 
 # 👣 Our Approach  
