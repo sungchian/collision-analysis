@@ -92,8 +92,8 @@ By focusing on the continuous relationship between sobriety levels and collision
 
 This "cleaned" dataset served as our initial benchmark for subsequent machine-learning experiments.  
 
-# 🔍 Machine Learning Models
-### Linear Regression    
+# 📈 Statistical Analysis
+### Regression Model
 - Regression Analysis to predict the correlation between sobriety and collisions:
    <br>
       <img src="images/pic13.jpg" width="400">
