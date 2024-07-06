@@ -79,22 +79,24 @@ This project uses the California Traffic Collision Data [Dataset](https://www.ka
   
 Highlighting these relationships helped us gain a deeper understanding of the data which offered valuable insight as we continued our analysis through machine learning models.  
 
-# 👣 Our Approach  
-Real estate analysis typically attempts to predict price, a continuous variable. However, we took a classification approach to this problem, since classification introduces a layer of interpretability and simplicity to our analysis, which can benefit business professionals and prospective buyers. By categorizing properties into pricing tiers (high and low), we aim to compare the accuracy and performance of each of the selected models.    
+# 👣 Our Approach (Todo)
+Regression analysis traditionally aims to predict the correlation between sobriety and collisions. 
+We utilized this approach to maintain a straightforward and precise analysis, providing valuable insights for policymakers and public safety officials. 
+By focusing on the continuous relationship between sobriety levels and collision frequencies, we aim to assess the accuracy and performance of the regression models we selected.   
 
 # 🧽 Data Cleaning  
-1. We discretized the dependent variable.   
+1. We defined sobriety_encoded as our dependent variable.   
    <br>
       <img src="Images/img-06.png" width="600">
    <br>  
-2. Then, we filled in the missing values with the mean and median values. Specifically, we used the median for the missing values in the acre_lot, house_size, and price columns. Additionally, rows with missing values in the city and zip_code columns were removed. Lastly, the records for Tennessee, South Carolina, and Virginia listings were removed because they contained a substantial amount of missing data.  
+2. Then, we dropped the missing values.
    <br>
       <img src="Images/img-07.png" width="600">
    <br>
 
-This "cleaned" dataset served as our initial benchmark for subsequent machine learning experiments.  
+This "cleaned" dataset served as our initial benchmark for subsequent machine-learning experiments.  
 
-# 🔍 Machine Learning Models  
+# 🔍 Machine Learning Models (Todo)
 ### Random Forest Classifier    
 - Without any pre-processing techniques, the results are as follows:  
    <br>
