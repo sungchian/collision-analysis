@@ -96,7 +96,7 @@ This "cleaned" dataset served as our initial benchmark for subsequent machine-le
 ### Regression Model
 - Regression Analysis to predict the correlation between sobriety and collisions:
    <br>
-      <img src="images/pic13.jpg" width="400">
+      <img src="images/pic13.jpg" width="600">
    <br>  
 - This model aims to predict sobriety_encoded, a numerical representation of the party_sobriety categories, using killed_victims and injured_victims as predictors.
   
