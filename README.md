@@ -59,7 +59,7 @@ This project uses the California Traffic Collision Data [Dataset](https://www.ka
    <br>
 - Look at the collisions at different times of the day. As mentioned, the categories of motorcycle or scooter, car, and truck have the most collisions. We can see that most collisions happen from 3 pm to 6 pm and the number peaks at 5 pm, which is the time the sun sets and people get off of work. When the sun is setting, the sunlight will become very strong. On top of that, many people will rush back home which might result in not driving carefully.
    <br>
-       <img src="images/pic10.jpg" width="500">
+       <img src="images/pic10.jpg" width="600">
    <br>
 - In the occurrences in the holiday chart, we can give some insights. Considering certain holidays (such as Halloween) have consistently shown high accident rates over the years, the government may consider intensifying traffic regulations during these dates.
    <br>
