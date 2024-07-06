@@ -74,7 +74,7 @@ This project uses the California Traffic Collision Data [Dataset](https://www.ka
   
 Highlighting these relationships helped us gain a deeper understanding of the data which offered valuable insight as we continued our analysis through machine learning models.  
 
-# 👣 Our Approach (Todo)
+# 👣 Our Approach
 Regression analysis traditionally aims to predict the correlation between sobriety and collisions. 
 We utilized this approach to maintain a straightforward and precise analysis, providing valuable insights for policymakers and public safety officials. 
 By focusing on the continuous relationship between sobriety levels and collision frequencies, we aim to assess the accuracy and performance of the regression models we selected.   
@@ -83,62 +83,54 @@ By focusing on the continuous relationship between sobriety levels and collision
 1. We defined sobriety_encoded as our dependent variable.   
 2. Then, we dropped the missing values.
    <br>
-      <img src="images/pic14.jpg" width="600">
+      <img src="images/pic14.jpg" width="300">
    <br>
 3. We removed any duplicated data to ensure its cleanliness.
    <br>
-      <img src="images/pic15.jpg" width="600">
+      <img src="images/pic15.jpg" width="300">
    <br>
 
 This "cleaned" dataset served as our initial benchmark for subsequent machine-learning experiments.  
 
-# 🔍 Machine Learning Models (Todo)
-### Random Forest Classifier    
-- Without any pre-processing techniques, the results are as follows:  
+# 🔍 Machine Learning Models
+### Linear Regression    
+- Regression Analysis to predict the correlation between sobriety and collisions:
    <br>
       <img src="images/pic13.jpg" width="400">
    <br>  
-The model predicts approximately 92% of instances correctly. The precision and recall of the model are relatively high, at 0.92, indicating a low rate of false positives and negatives. Additionally, the high F1-score implies that this model performs well. Overall, the initial benchmark for the Random Forest algorithm on this dataset demonstrates strong performance with high accuracy.  
-- We attempted to enhance the model with random sampling, dummy variables for the state attribute, feature selection, binning, min-max scaling, and standardization pre-processing techniques. Random sampling reduced the dataset for additional features while maintaining a similar model accuracy. Implementing dummy variables for the state attribute did not change the accuracy. Since the number of attributes in the original dataset is not extremely large, feature selection was not useful. Binning underscored the nature of the data which decreased its accuracy. Standardization improved the previous pre-processing, but it had minimal effect on improving the accuracy.  
-   <br>
-      <img src="Images/img-09.jpg" width="400">
-   <br>  
-Overall, the Random Forest model that performed the best was the benchmark model (with no pre-processing). Many of the additional pre-processing techniques either worsened or had no impact relative to the original accuracy. However, a finding that was gained from the pre-processing was that price is likely to be influenced by location since adding the dummy variables for the state attribute improved the randomly sampled model.
+- This model aims to predict sobriety_encoded, a numerical representation of the party_sobriety categories, using killed_victims and injured_victims as predictors.
+  
+## Coefficients:
+- R-squared (0.018): This value is quite low, indicating that only about 1.8% of the variation in the sobriety_encoded can be explained by the independent variables in the model. This suggests that the model does not capture most of the variability in the sobriety status, and there may be other significant factors not included in the model.
+- Constant (1.3863): This value represents the expected sobriety_encoded score when both independent variables (killed_victims and injured_victims) are zero. The interpretation of this constant should be in the context of how sobriety_encoded was defined.
+- killed_victims (0.4844): This positive coefficient indicates that as the number of killed victims increases, the sobriety_encoded value tends to increase. This suggests a positive association between the number of fatalities in an incident and the encoded sobriety status. The relationship is statistically significant, given the low p-value.
+- injured_victims (-0.0970): The negative coefficient here implies that an increase in the number of injured victims is associated with a decrease in the sobriety_encoded value. This is statistically significant but suggests a weaker relationship compared to the killed_victims.
+- P-values: The p-values for both killed_victims and injured_victims are effectively zero, indicating strong statistical significance. This means that it is very unlikely that these relationships are due to chance.
 
-### K-Nearest Neighbors Classifier  
-- Without any pre-processing techniques, the results are as follows:  
-   <br>
-      <img src="Images/img-10.jpg" width="400">
-   <br>  
-This model predicts approximately 88% of instances correctly. The model's precision and recall are commendably high, at 0.87, suggesting a low frequency of false positives and negatives. The high F1-score further confirms the model's effectiveness. However, this model appears to be less accurate than the Random Forest model with a 92% overall accuracy.
-- The pre-processing techniques that we employed were random sampling, an introduction of dunny variables for the states attribute, feature selection, binning, min-max scaling, and standardization. Most of the techniques were moderately effective, but they tended to distort the true nature of the data, leading to less accurate predictions. Standardization offered some improvement over the other pre-processing techniques. However, the impact it had on the overall accuracy was insignificant.     
-   <br>
-      <img src="Images/img-11.jpg" width="400">
-   <br>  
-Overall, the KNN model achieved optimal results when applied to the standardization of the bed, bath, acre_lot, and house_size attributes. The standardized KNN model achieved an 88.5% accuracy. a slight increase of 0.1% from the benchmark model.  
-
-### Logistic Regression  
-- Without any pre-processing techniques, the results are as follows:  
-   <br>
-      <img src="Images/img-12.jpg" width="400">
-   <br>  
-This model predicts approximately 70% of instances correctly. The model's precision and recall contained mixed results. As noted by the F1-score of 0.65 for the "high" class and 0.74 for the "low" class, this seems to suggest that the model is better at identifying the "low" class data points. Overall, this Logistic Regression model has room for improvement, particularly in capturing the "high" class data points.
-- Similar to the Random Forest and KNN models, the pre-processing techniques that we employed were random sampling, an introduction of dunny variables for the states attribute, feature selection, binning, min-max scaling, and standardization. Implementing dummy variables for the states attribute increased the model's accuracy to 72%. Standardization and binning on the house_size attribute improved the model's accuracy to 75%.  
-   <br>
-      <img src="Images/img-13.jpg" width="400">
-   <br>  
-Overall, the Logistic Regression approach had better performance in two separate instances, binning on the house_size attribute and a combination of random sampling, dummy variables, and standardization. Both models achieved an accuracy of around 75%, an improvement of approximately 5% from the benchmark model.
 
 # 🔑 Key Takeaways    
-We implemented three machine learning models to predict whether a real estate listing could be classified as a "high" or "low" price listing. From our analysis, we concluded how different models reacted to a variety of pre-processing techniques. From our choice of pre-processing techniques, the best techniques seemed to involve a combination of random sampling, standardization, and dummy variables for the state attribute. The binning technique improved the Logistic Regression model significantly. However, binning also led to a significant decrease in the performance of the Random Forest and KNN models, suggesting the importance of retaining the original granularity for some features.  
-
-For this dataset, the best model seemed to be the Random Forest algorithm with no pre-processing. This model had the highest accuracy of 92%. Property location also seemed to be the attribute that plays a significant role in price.  
+1. High Risk of Two-Wheeled Vehicles:
+   - Motorcycles and scooters pose a higher risk compared to other transportation modes.
+   - There is a need for increased safety awareness, proper training, and the use of appropriate safety gear for riders.
+2. Importance of Safe Driving Habits:
+   - Wearing sunglasses while driving can significantly reduce risks associated with glare
+   - Avoiding unnecessary travel during high-risk times, such as Halloween, can enhance road safety.
+3. Insurance Benefits for Young Drivers:
+   - Car insurance rates drop by 9% for individuals at age 25, reflecting increased driving maturity and responsibility.
+   - This reduction serves as an incentive for young drivers to adopt cautious driving behaviors.
+4. Comprehensive Approach to Road Safety:
+   - Addressing road safety involves multiple facets, including demographic-specific interventions, promoting safety measures for high-risk vehicles, recommending safer vehicle brands, encouraging safe driving habits, and recognizing insurance trends.
+   - Informed decision-making and targeted interventions are essential for fostering a safer and more responsible driving culture.
+  
 
 # ☁️ Project Improvements  
-This project was for the first machine learning class that I took, and it was also the first project where I applied machine learning algorithms. Knowing what I know now if I were to improve this project, I would focus on improving the Random Forest model using different boosting methods, such as Adaptive Boosting and Gradient Boosting.  
+1. Advanced Analytical Techniques:
+   - Utilize machine learning models to predict collision likelihood based on various factors, providing deeper insights into risk patterns.
+   - Apply clustering algorithms to identify and analyze collision hotspots, leading to more targeted interventions.
+2. Demographic-Specific Studies:
+   - Conduct separate analyses for different age groups and socioeconomic backgrounds to identify unique patterns and tailor interventions accordingly.
+   - Explore the impact of educational and awareness campaigns on driving behaviors across demographics.
+3. Detailed Vehicle Safety Analysis:
+   - Expand the scope to include more vehicle brands and models, providing a broader range of safety recommendations.
+   - Perform a more granular analysis of vehicle safety features and their effectiveness in preventing collisions.
 
-
-
-
-
- 
